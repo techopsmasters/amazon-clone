@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
+      - CHOKIDAR_USEPOLLING=true
     volumes:
       - .:/usr/src/app
-    restart: always
+      - /usr/src/app/node_modules
