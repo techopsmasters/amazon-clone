@@ -21,13 +21,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            script {
-                sh "${env.DOCKER_COMPOSE} down"
-                sh 'docker system prune -f'
-            }
-        }
-    }
 }
